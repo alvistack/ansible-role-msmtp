@@ -1,0 +1,15 @@
+# {{ ansible_managed }}
+
+[Unit]
+Description=msmtpd: A minimal SMTP server
+Documentation=https://marlam.de/msmtp/
+
+[Service]
+EnvironmentFile=-/etc/default/msmtpd
+ExecStart=/usr/local/bin/msmtpd $DAEMON_OPTS
+Restart=always
+StartLimitInterval=0
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
