@@ -23,6 +23,7 @@ _zypper: [
   { state: "latest", name: "libopenssl-devel" },
   { state: "latest", name: "make" },
   { state: "latest", name: "net-tools" },
+  { state: "latest", name: "net-tools-deprecated" },
   { state: "latest", name: "pkgconfig" },
   { state: "latest", name: "wget" },
 ]
