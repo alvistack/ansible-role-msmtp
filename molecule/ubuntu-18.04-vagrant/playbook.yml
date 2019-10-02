@@ -14,11 +14,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# msmtp version.
-msmtp_version: "1.8.6"
+- hosts: all
+  remote_user: root
+  become: true
+  roles:
+    - role: msmtp
 
-# msmtp download details.
-msmtp_download: "{{ _msmtp_download[msmtp_version] }}"
+- hosts: all
+  remote_user: root
+  become: true
+  tasks:
+    - name: start service
+      service:
+        name: "msmtpd"
+        state: "started"
+      changed_when: false
+      ignore_errors: true
 
-# Options to pass to msmtpd.
-msmtpd_daemon_opts: ""
+    - name: msmtp --version
+      command: msmtp --version
+      register: result
+      changed_when: result is not succeeded

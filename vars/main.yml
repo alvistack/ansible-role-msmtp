@@ -15,6 +15,10 @@
 # limitations under the License.
 
 _msmtp_download:
+  1.8.6:
+    url: "https://marlam.de/msmtp/releases/msmtp-1.8.6.tar.xz"
+    dest: "/var/cache/ansible/msmtp-1.8.6.tar.xz"
+    checksum: "sha1:c86edd59504d4ba6a077946d64263e0534595f34"
   1.8.5:
     url: "https://marlam.de/msmtp/releases/msmtp-1.8.5.tar.xz"
     dest: "/var/cache/ansible/msmtp-1.8.5.tar.xz"
