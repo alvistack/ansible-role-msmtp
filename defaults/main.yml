@@ -15,7 +15,7 @@
 # limitations under the License.
 
 # msmtp version.
-msmtp_version: "1.8.5"
+msmtp_version: "1.8.6"
 
 # msmtp download details.
 msmtp_download: "{{ _msmtp_download[msmtp_version] }}"
