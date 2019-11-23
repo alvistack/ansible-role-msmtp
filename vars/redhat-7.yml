@@ -14,15 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum_repository:
-  - { state: "latest", name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" }
-
 _yum:
   - { state: "latest", name: "curl" }
   - { state: "latest", name: "gcc" }
   - { state: "latest", name: "gnutls-devel" }
   - { state: "latest", name: "libffi-devel" }
-  - { state: "latest", name: "libgsasl-devel" }
   - { state: "latest", name: "make" }
   - { state: "latest", name: "net-tools" }
   - { state: "latest", name: "openssl-devel" }
