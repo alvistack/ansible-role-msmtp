@@ -126,6 +126,10 @@
     - { dest: "/usr/local/etc/msmtprc" }
   tags: msmtp
 
+- name: flush handlers
+  meta: flush_handlers
+  tags: msmtp
+
 - name: enable service
   service:
     name: "msmtpd"
@@ -133,8 +137,4 @@
     enabled: true
   changed_when: false
   ignore_errors: true
-  tags: msmtp
-
-- name: flush handlers
-  meta: flush_handlers
   tags: msmtp
