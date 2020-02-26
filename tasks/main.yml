@@ -84,7 +84,6 @@
       && tar -x -C $TMP_DIR -f {{ msmtp_download.dest }} --strip-components=1 \
       && cd $TMP_DIR \
       && ./configure --with-libgsasl --with-msmtpd \
-      && make uninstall \
       && make \
       && make install \
       && rm -rf $TMP_DIR
