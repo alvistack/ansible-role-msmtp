@@ -1,6 +1,6 @@
 # Ansible Role for msmtp
 
-[![Travis](https://img.shields.io/travis/alvistack/ansible-role-msmtp.svg)](https://travis-ci.org/alvistack/ansible-role-msmtp)
+[![Travis](https://img.shields.io/travis/com/alvistack/ansible-role-msmtp.svg)](https://travis-ci.com/alvistack/ansible-role-msmtp)
 [![GitHub release](https://img.shields.io/github/release/alvistack/ansible-role-msmtp.svg)](https://github.com/alvistack/ansible-role-msmtp)
 [![GitHub license](https://img.shields.io/github/license/alvistack/ansible-role-msmtp.svg)](https://github.com/alvistack/ansible-role-msmtp/blob/master/LICENSE)
 [![Ansible Role](https://img.shields.io/badge/galaxy-alvistack.msmtp-blue.svg)](https://galaxy.ansible.com/alvistack/msmtp)
