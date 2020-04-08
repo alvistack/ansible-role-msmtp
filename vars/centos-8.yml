@@ -14,26 +14,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-galaxy_info:
-  role_name: msmtp
-  author: "Wong Hoi Sing Edison <hswong3i@pantarei-design.com>"
-  description: Ansible Role for msmtp Installation
-  company: PantaRei Design
-  license: Apache-2.0
-  min_ansible_version: 2.9
-  platforms:
-    - name: Ubuntu
-      versions:
-        - eoan
-        - bionic
-        - xenial
-    - name: EL
-      versions:
-        - 8
-        - 7
-    - name: opensuse
-      versions:
-        - all
-  galaxy_tags:
-    - system
-dependencies: []
+_yum:
+  - { state: "latest", name: "curl" }
+  - { state: "latest", name: "gcc" }
+  - { state: "latest", name: "gnutls-devel" }
+  - { state: "latest", name: "libffi-devel" }
+  - { state: "latest", name: "make" }
+  - { state: "latest", name: "net-tools" }
+  - { state: "latest", name: "openssl-devel" }
+  - { state: "latest", name: "pkgconfig" }
+  - { state: "latest", name: "wget" }
