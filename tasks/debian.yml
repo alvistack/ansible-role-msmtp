@@ -21,4 +21,6 @@
   loop: "{{ _apt }}"
   register: result
   until: result is succeeded
+  notify:
+    - msmtp | systemctl restart
   tags: msmtp

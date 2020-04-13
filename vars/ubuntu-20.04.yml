@@ -16,11 +16,7 @@
 
 _apt:
   - { state: "latest", name: "curl" }
-  - { state: "latest", name: "gcc" }
-  - { state: "latest", name: "libffi-dev" }
-  - { state: "latest", name: "libgnutls28-dev" }
-  - { state: "latest", name: "libssl-dev" }
-  - { state: "latest", name: "make" }
+  - { state: "latest", name: "msmtp" }
+  - { state: "latest", name: "msmtp-mta" }
   - { state: "latest", name: "net-tools" }
-  - { state: "latest", name: "pkg-config" }
   - { state: "latest", name: "wget" }

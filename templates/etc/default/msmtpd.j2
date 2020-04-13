@@ -1,4 +1,7 @@
 # {{ ansible_managed }}
 
-# Options to pass to msmtpd.
-DAEMON_OPTS="{{ msmtpd_daemon_opts }}"
+# Listen on the given IPv6 or IPv4 address instead of 127.0.0.1
+INTERFACE={{ msmtpd_interface }}
+
+# Listen on the given port number instead of 25
+PORT={{ msmtpd_port }}

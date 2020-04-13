@@ -14,13 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_yum:
-  - { state: "latest", name: "curl" }
-  - { state: "latest", name: "gcc" }
-  - { state: "latest", name: "gnutls-devel" }
-  - { state: "latest", name: "libffi-devel" }
-  - { state: "latest", name: "make" }
-  - { state: "latest", name: "net-tools" }
-  - { state: "latest", name: "openssl-devel" }
-  - { state: "latest", name: "pkgconfig" }
-  - { state: "latest", name: "wget" }
+_rpm_repository: []
+
+_yum: []

@@ -20,5 +20,8 @@ msmtp_version: "1.8.8"
 # msmtp download details.
 msmtp_download: "{{ _msmtp_download[msmtp_version] }}"
 
-# Options to pass to msmtpd.
-msmtpd_daemon_opts: ""
+# Listen on the given IPv6 or IPv4 address instead of 127.0.0.1
+msmtpd_interface: "127.0.0.1"
+
+# Listen on the given port number instead of 25.
+msmtpd_port: "25"

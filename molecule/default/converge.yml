@@ -19,7 +19,4 @@
   become: true
   tasks:
     - include_role:
-        name: python
-
-    - include_role:
         name: msmtp
