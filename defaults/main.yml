@@ -14,12 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# msmtp version.
-msmtp_version: "1.8.8"
-
-# msmtp download details.
-msmtp_download: "{{ _msmtp_download[msmtp_version] }}"
-
 # Listen on the given IPv6 or IPv4 address instead of 127.0.0.1
 msmtpd_interface: "127.0.0.1"
 
