@@ -15,8 +15,5 @@
 # limitations under the License.
 
 _apt:
-  - { state: "latest", name: "curl" }
   - { state: "latest", name: "msmtp" }
   - { state: "latest", name: "msmtp-mta" }
-  - { state: "latest", name: "net-tools" }
-  - { state: "latest", name: "wget" }

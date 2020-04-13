@@ -19,7 +19,4 @@ _rpm_repository:
     state: "latest"
 
 _yum:
-  - { state: "latest", name: "curl" }
   - { state: "latest", name: "msmtp" }
-  - { state: "latest", name: "net-tools" }
-  - { state: "latest", name: "wget" }
