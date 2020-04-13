@@ -13,3 +13,21 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+_msmtp_download:
+  1.8.8:
+    url: "https://marlam.de/msmtp/releases/msmtp-1.8.8.tar.xz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/msmtp-1.8.8.tar.xz"
+    checksum: "sha1:4dc153ff116d558b6243a06d9aa97e84a88ebff7"
+  1.8.7:
+    url: "https://marlam.de/msmtp/releases/msmtp-1.8.7.tar.xz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/msmtp-1.8.7.tar.xz"
+    checksum: "sha1:0a6a7a5b453e52bc5c5e1e74b1fb11f81e394c2c"
+  1.8.6:
+    url: "https://marlam.de/msmtp/releases/msmtp-1.8.6.tar.xz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/msmtp-1.8.6.tar.xz"
+    checksum: "sha1:c86edd59504d4ba6a077946d64263e0534595f34"
+  1.8.5:
+    url: "https://marlam.de/msmtp/releases/msmtp-1.8.5.tar.xz"
+    dest: "{{ ansible_user_dir }}/.ansible/tmp/msmtp-1.8.5.tar.xz"
+    checksum: "sha1:943210939c10da9e2cbe63474e0be681c144222b"

@@ -14,9 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-_rpm_repository:
-  - name: "https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm"
-    state: "latest"
-
 _yum:
-  - { state: "latest", name: "msmtp" }
+  - { state: "latest", name: "gcc" }
+  - { state: "latest", name: "gnutls-devel" }
+  - { state: "latest", name: "libffi-devel" }
+  - { state: "latest", name: "make" }
+  - { state: "latest", name: "openssl-devel" }
+  - { state: "latest", name: "pkgconfig" }

@@ -15,5 +15,9 @@
 # limitations under the License.
 
 _zypper:
-  - { state: "latest", name: "msmtp" }
-  - { state: "latest", name: "msmtp-mta" }
+  - { state: "latest", name: "gcc" }
+  - { state: "latest", name: "libffi-devel" }
+  - { state: "latest", name: "libgnutls-devel" }
+  - { state: "latest", name: "libopenssl-devel" }
+  - { state: "latest", name: "make" }
+  - { state: "latest", name: "pkgconfig" }

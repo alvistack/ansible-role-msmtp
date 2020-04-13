@@ -18,7 +18,7 @@ Environment=INTERFACE=127.0.0.1 PORT=25
 EnvironmentFile=-/etc/default/msmtpd
 
 Type=simple
-ExecStart=/usr/bin/msmtpd --interface=${INTERFACE} --port=${PORT}
+ExecStart=/usr/local/bin/msmtpd --interface=${INTERFACE} --port=${PORT}
 
 Restart=always
 RestartSec=60

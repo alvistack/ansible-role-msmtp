@@ -23,6 +23,4 @@
   loop: "{{ _zypper }}"
   register: result
   until: result is succeeded
-  notify:
-    - msmtp | systemctl restart
   tags: msmtp
