@@ -93,7 +93,7 @@
   until: result is succeeded
   notify:
     - msmtp | systemctl daemon-reload
-    - msmtp | systemctl restart
+    - msmtp | systemctl restart msmtpd
   tags: msmtp
 
 - name: copy templates
@@ -108,7 +108,7 @@
     - { dest: "/lib/systemd/system/msmtpd.service" }
   notify:
     - msmtp | systemctl daemon-reload
-    - msmtp | systemctl restart
+    - msmtp | systemctl restart msmtpd
   tags: msmtp
 
 - name: prepare files
