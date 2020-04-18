@@ -129,7 +129,7 @@
   meta: flush_handlers
   tags: msmtp
 
-- name: start service
+- name: systemctl start msmtpd
   service:
     name: "msmtpd"
     state: "started"
