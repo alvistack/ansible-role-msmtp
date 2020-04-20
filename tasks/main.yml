@@ -125,10 +125,6 @@
     - { dest: "/usr/local/bin/msmtpd", mode: "0755" }
   tags: msmtp
 
-- name: flush handlers
-  meta: flush_handlers
-  tags: msmtp
-
 - name: systemctl start msmtpd
   service:
     name: "msmtpd"
@@ -136,4 +132,8 @@
     enabled: true
   changed_when: false
   ignore_errors: true
+  tags: msmtp
+
+- name: flush handlers
+  meta: flush_handlers
   tags: msmtp
