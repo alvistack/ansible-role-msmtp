@@ -59,7 +59,6 @@
     - { dest: "/etc/default" }
     - { dest: "/lib/systemd/system" }
     - { dest: "/usr/local/bin" }
-    - { dest: "/usr/local/etc" }
     - { dest: "{{ msmtp_download.dest | dirname }}" }
   tags: msmtp
 
@@ -94,7 +93,7 @@
   until: result is succeeded
   notify:
     - msmtp | systemctl daemon-reload
-    - msmtp | systemctl restart
+    - msmtp | systemctl restart msmtpd
   tags: msmtp
 
 - name: copy templates
@@ -107,10 +106,9 @@
   loop:
     - { dest: "/etc/default/msmtpd" }
     - { dest: "/lib/systemd/system/msmtpd.service" }
-    - { dest: "/usr/local/etc/msmtprc" }
   notify:
     - msmtp | systemctl daemon-reload
-    - msmtp | systemctl restart
+    - msmtp | systemctl restart msmtpd
   tags: msmtp
 
 - name: prepare files
@@ -125,18 +123,17 @@
     - { dest: "/lib/systemd/system/msmtpd.service" }
     - { dest: "/usr/local/bin/msmtp", mode: "0755" }
     - { dest: "/usr/local/bin/msmtpd", mode: "0755" }
-    - { dest: "/usr/local/etc/msmtprc" }
   tags: msmtp
 
-- name: flush handlers
-  meta: flush_handlers
-  tags: msmtp
-
-- name: start service
+- name: systemctl start msmtpd
   service:
     name: "msmtpd"
     state: "started"
     enabled: true
   changed_when: false
   ignore_errors: true
+  tags: msmtp
+
+- name: flush handlers
+  meta: flush_handlers
   tags: msmtp

@@ -20,7 +20,7 @@
   changed_when: false
   ignore_errors: true
 
-- name: msmtp | systemctl restart
+- name: msmtp | systemctl restart msmtpd
   service:
     name: "msmtpd"
     state: "restarted"
