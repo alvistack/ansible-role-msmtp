@@ -20,4 +20,4 @@ _zypper:
   - { state: "latest", name: "libgnutls-devel" }
   - { state: "latest", name: "libopenssl-devel" }
   - { state: "latest", name: "make" }
-  - { state: "latest", name: "pkgconfig" }
+  - { state: "latest", name: "pkg-config" }
