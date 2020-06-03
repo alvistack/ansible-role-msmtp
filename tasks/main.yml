@@ -76,21 +76,19 @@
   until: get_url_result is succeeded
   tags: msmtp
 
-- name: build package
+- name: unarchive package
   shell: |
     set -o pipefail
+    cd /usr/local/bin
     TMP_DIR="$(mktemp -d)" \
-      && tar -x -C $TMP_DIR -f {{ msmtp_download.dest }} --strip-components=1 \
-      && cd $TMP_DIR \
-      && ./configure --with-libgsasl --with-msmtpd \
-      && make \
-      && make install \
+      && tar -zx -C $TMP_DIR -f {{ msmtp_download.dest }} --strip-components=1 \
+      && chown root:root $TMP_DIR/* \
+      && chmod 0755 $TMP_DIR/* \
+      && mv $TMP_DIR/* . \
       && rm -rf $TMP_DIR
   args:
     executable: "/bin/bash"
   when: get_url_result is changed
-  register: result
-  until: result is succeeded
   notify:
     - msmtp | systemctl daemon-reload
     - msmtp | systemctl restart msmtpd
