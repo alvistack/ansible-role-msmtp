@@ -13,11 +13,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-_zypper:
-  - { state: "latest", name: "gcc" }
-  - { state: "latest", name: "libffi-devel" }
-  - { state: "latest", name: "libgnutls-devel" }
-  - { state: "latest", name: "libopenssl-devel" }
-  - { state: "latest", name: "make" }
-  - { state: "latest", name: "pkgconfig" }
